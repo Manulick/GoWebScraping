@@ -1,4 +1,4 @@
-module github.com/Manulick/GoWebScraping/v1
+module GoWebScraping/solution
 
 go 1.18
 
