@@ -8,7 +8,7 @@ import (
 
 func main() {
 	log.Default().Println("Starting")
-	response := openapi.Response{}
+	response := openapi.Products{}
 	wg := sync.WaitGroup{}
 
 	wg.Add(len(urlList))
@@ -20,5 +20,7 @@ func main() {
 
 	}
 	wg.Wait()
+
+	createFile(response)
 	log.Default().Println("Finish")
 }
