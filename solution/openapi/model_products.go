@@ -1,5 +1,5 @@
 package openapi
 
 type Products struct {
-	Data []Product
+	Products []Product `json:"products"`
 }

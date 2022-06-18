@@ -1,13 +1,13 @@
 package openapi
 
 type Product struct {
-	Description string
+	Description string `json:"description"`
 
-	Price string
+	Price string `json:"price"`
 
-	OldPrice string
+	OldPrice string `json:"oldPrice"`
 
-	Brand string
+	Brand string `json:"brand"`
 
-	ImageURL string
+	ImageURL string `json:"imageURL"`
 }
