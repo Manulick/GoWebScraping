@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/gocolly/colly/v2"
+	"github.com/gocolly/colly/v2/proxy"
 	jsoniter "github.com/json-iterator/go"
 	"io/ioutil"
 	"log"
@@ -30,6 +31,12 @@ func getUrlList(url string, response *Products) {
 	c.OnRequest(func(r *colly.Request) {
 		log.Default().Println("visiting ", r.URL)
 	})
+
+	rp, err := proxy.RoundRobinProxySwitcher("socks5://127.0.0.1:1337", "socks5://127.0.0.1:1338")
+	if err != nil {
+		log.Fatal(err)
+	}
+	c.SetProxyFunc(rp)
 
 	c.OnResponse(func(r *colly.Response) {
 		if r.StatusCode != 200 {
