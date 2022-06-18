@@ -165,8 +165,8 @@ func getDataAttribute(url string, element string, attr string) string {
 func createFile(productsList Products) {
 	log.Default().Println("creating file...")
 	file, _ := json.Marshal(productsList)
-	err := ioutil.WriteFile("ProductList.json", file, 0644)
+	err := ioutil.WriteFile("file/ProductList.json", file, 0644)
 	if err != nil {
-		log.Fatalf(" something got wrong with %s creating", file)
+		log.Fatal(" something got wrong with file creating")
 	}
 }
