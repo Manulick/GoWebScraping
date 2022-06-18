@@ -23,10 +23,9 @@ $ cd solution
 # install require libraries
 $ go mod tidy
 
-# Run the app
-$ go build GoWebScraping/solution
 ```
-
+# to run code
+it depens of which IDE you will use
 ## Email Contact
 
 [gmail] : nava.arevalo@gmail.com
