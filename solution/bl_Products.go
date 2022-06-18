@@ -1,7 +1,6 @@
 package main
 
 import (
-	"GoWebScraping/solution/openapi"
 	"github.com/gocolly/colly/v2"
 	jsoniter "github.com/json-iterator/go"
 	"io/ioutil"
@@ -18,11 +17,11 @@ var urlList = []string{
 	"https://listado.mercadolibre.com.mx/_Deal_deportes-y-fitness-accesorios",
 }
 
-var products openapi.Products
+var products Products
 
-func getUrlList(url string, response *openapi.Products) {
+func getUrlList(url string, response *Products) {
 
-	var product openapi.Product
+	var product Product
 
 	var mu sync.Mutex
 
@@ -163,7 +162,7 @@ func getDataAttribute(url string, element string, attr string) string {
 	return response
 }
 
-func createFile(productsList openapi.Products) {
+func createFile(productsList Products) {
 	log.Default().Println("creating file...")
 	file, _ := json.Marshal(productsList)
 	err := ioutil.WriteFile("ProductList.json", file, 0644)

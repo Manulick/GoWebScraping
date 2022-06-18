@@ -1,14 +1,13 @@
 package main
 
 import (
-	"GoWebScraping/solution/openapi"
 	"log"
 	"sync"
 )
 
 func main() {
 	log.Default().Println("Starting")
-	response := openapi.Products{}
+	response := Products{}
 	wg := sync.WaitGroup{}
 
 	wg.Add(len(urlList))

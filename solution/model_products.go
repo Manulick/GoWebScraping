@@ -1,4 +1,4 @@
-package openapi
+package main
 
 type Products struct {
 	Products []Product `json:"products"`
