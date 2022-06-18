@@ -7,6 +7,8 @@ For this project I have to scrap the following url's
 - https://listado.mercadolibre.com.mx/supermercado/bebidas/
 - https://listado.mercadolibre.com.mx/_Deal_deportes-y-fitness-accesorios
 
+I will extract data from each product in list (Name, price, oldPrice, brand and imgUrl) to store it in a json file. thanks of use a json format to store it, the data will be compact and it could be use easily in other Api's
+
 ## How To Use
 
 To clone and run this application, you'll need [Git](https://git-scm.com) and [Go](https://go.dev/dl/) ) installed on your computer. From your command line:
