@@ -42,7 +42,7 @@ func getUrlList(url string, response *Products) {
 		if len(products.Products) < 10 {
 			name, err := getData(link, "h1.ui-pdp-title")
 			price, err := getData(link, "div.ui-pdp-price.mt-16.ui-pdp-price--size-large div.ui-pdp-price__second-line span.andes-money-amount__fraction")
-			oldPrice, err := getData(link, "s.andes-money-amount.ui-pdp-price__part.ui-pdp-price__original-value.andes-money-amount--previous.andes-money-amount--cents-superscript.andes-money-amount--compact span.andes-money-amount__fraction")
+			oldPrice, err := getData(link, "s.andes-money-amount.ui-pdp-price__part.ui-pdp-price__original-value span.andes-money-amount__fraction")
 			brand, err := getDataBrand(link, "td.andes-table__column")
 			imgUrl := getDataAttribute(link, "img.ui-pdp-image.ui-pdp-gallery__figure__image", "data-src")
 			if err != nil {
@@ -65,7 +65,7 @@ func getUrlList(url string, response *Products) {
 		if len(products.Products) < 10 {
 			name, err := getData(link, "h1.ui-pdp-title")
 			price, err := getData(link, "div.ui-pdp-price.mt-16.ui-pdp-price--size-large div.ui-pdp-price__second-line span.andes-money-amount__fraction")
-			oldPrice, err := getData(link, "s.andes-money-amount.ui-pdp-price__part.ui-pdp-price__original-value.andes-money-amount--previous.andes-money-amount--cents-superscript.andes-money-amount--compact span.andes-money-amount__fraction")
+			oldPrice, err := getData(link, "s.andes-money-amount.ui-pdp-price__part.ui-pdp-price__original-value span.andes-money-amount__fraction")
 			brand, err := getDataBrand(link, "td.andes-table__column")
 			imgUrl := getDataAttribute(link, "img.ui-pdp-image.ui-pdp-gallery__figure__image", "data-src")
 			if err != nil {
@@ -88,7 +88,7 @@ func getUrlList(url string, response *Products) {
 		if len(products.Products) < 10 {
 			name, err := getData(link, "h1.ui-pdp-title")
 			price, err := getData(link, "div.ui-pdp-price.mt-16.ui-pdp-price--size-large div.ui-pdp-price__second-line span.andes-money-amount__fraction")
-			oldPrice, err := getData(link, "s.andes-money-amount.ui-pdp-price__part.ui-pdp-price__original-value.andes-money-amount--previous.andes-money-amount--cents-superscript.andes-money-amount--compact span.andes-money-amount__fraction")
+			oldPrice, err := getData(link, "s.andes-money-amount.ui-pdp-price__part.ui-pdp-price__original-value span.andes-money-amount__fraction")
 			brand, err := getDataBrand(link, "td.andes-table__column")
 			imgUrl := getDataAttribute(link, "img.ui-pdp-image.ui-pdp-gallery__figure__image", "data-src")
 			if err != nil {
